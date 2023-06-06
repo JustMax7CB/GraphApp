@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1077180745912",
+    "project_id": "graphapp-5d260",
+    "storage_bucket": "graphapp-5d260.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077180745912:android:691bfb19a07ca4798b8c4d",
+        "android_client_info": {
+          "package_name": "com.maxshapira.triosoftapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077180745912-1ejr6oqio0dmussgiika7s8rrki3djh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4Sz58D6_ae7eC-xCwBRsReTFfR762pA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077180745912-1ejr6oqio0dmussgiika7s8rrki3djh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

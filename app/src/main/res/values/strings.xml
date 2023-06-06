@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TriosoftApp</string>
+    <string name="hint_user_name">Username</string>
+    <string name="hint_user_password">Password</string>
+    <string name="app_logo_description">app logo</string>
+    <string name="login">Login</string>
+    <string name="sign_in_button">Sign in</string>
+    <string name="sign_up_button">Sign up</string>
+    <string name="Register">Register</string>
+    <string name="add_new_point">Add New Point</string>
+    <string name="temperature_in_c">Temperature (°C)</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="humidity_percent">Humidity (%)</string>
+    <string name="save_button">Save</string>
+    <string name="logout">Logout</string>
+    <string name="add_new_point_entry">Add New Point Entry</string>
+</resources>
