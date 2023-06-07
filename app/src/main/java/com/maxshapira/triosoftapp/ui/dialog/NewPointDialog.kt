@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputFilter
 import android.text.TextWatcher
 import android.widget.Button
 import androidx.annotation.RequiresApi
@@ -38,6 +39,7 @@ class NewPointDialog(private val userId: String?) : DialogFragment() {
         binding = NewPointDialogLayoutBinding.inflate(inflater, null, false)
         builder.setView(binding.root)
         bindWidgets()
+        setEditTextFilters()
         newPointDialogViewModel = NewPointDialogViewModel(requireContext(), dateTimeEditText)
         setupListeners()
         newPointDialogViewModel.setupTemperatureGauge(temperatureGauge)
@@ -52,6 +54,11 @@ class NewPointDialog(private val userId: String?) : DialogFragment() {
         temperatureGauge = binding.gaugeTemperature
         humidityGauge = binding.gaugeHumidity
         saveButton = binding.buttonSave
+    }
+
+    private fun setEditTextFilters() {
+        temperatureEditText.filters = arrayOf<InputFilter>(MinMaxFilter("-10.0", "50.0"))
+        humidityEditText.filters = arrayOf<InputFilter>(MinMaxFilter("0.0", "100.0"))
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -80,7 +87,6 @@ class NewPointDialog(private val userId: String?) : DialogFragment() {
 
         humidityEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {

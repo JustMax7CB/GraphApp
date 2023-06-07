@@ -1,6 +1,7 @@
 package com.maxshapira.triosoftapp.ui.chart
 
 import android.content.Context
+import android.graphics.Color
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.LineChart
@@ -48,18 +49,15 @@ class MyLineChart(
                 setDrawAxisLine(false)
                 textSize = 15f
                 labelRotationAngle = -30f
-
             }
 
             temperatureAxis.apply {
                 isEnabled = true
-                setDrawGridLines(false)
                 textColor = ContextCompat.getColor(context, R.color.black)
             }
 
             humidityAxis.apply {
-                setDrawGridLines(false)
-                axisLineColor = ContextCompat.getColor(context, R.color.black)
+                axisLineColor = Color.parseColor("#A7CDE8")
                 textColor = ContextCompat.getColor(context, R.color.black)
             }
 
@@ -72,7 +70,6 @@ class MyLineChart(
                 horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
                 form = Legend.LegendForm.LINE
             }
-
         }
     }
 
@@ -100,7 +97,7 @@ class MyLineChart(
             lineWidth = 3f
             valueTextSize = 15f
             mode = LineDataSet.Mode.CUBIC_BEZIER
-            color = ContextCompat.getColor(context, R.color.black)
+            color = Color.parseColor("#4691C7")
             valueTextColor = ContextCompat.getColor(
                 context,
                 androidx.appcompat.R.color.abc_primary_text_material_light
@@ -112,10 +109,7 @@ class MyLineChart(
             lineWidth = 3f
             valueTextSize = 15f
             mode = LineDataSet.Mode.CUBIC_BEZIER
-            color = ContextCompat.getColor(
-                context,
-                androidx.appcompat.R.color.abc_primary_text_material_light
-            )
+            color = Color.parseColor("#A7CDE8")
             valueTextColor = ContextCompat.getColor(context, R.color.black)
             enableDashedLine(20F, 10F, 0F)
         }

@@ -1,19 +1,23 @@
 package com.maxshapira.triosoftapp.ui.registration
 
-import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import com.maxshapira.triosoftapp.network.firebase.FirebaseAuthManager
 
-class RegistrationViewModel : ViewModel() {
+class RegistrationViewModel() : ViewModel() {
 
-    fun registerUser(username: String, password: String, context: Context) {
+
+    fun registerUser(
+        username: String,
+        password: String,
+        callback: (Boolean, String?) -> Unit
+    ) {
         FirebaseAuthManager.signUp(username, password) { success, errorMessage ->
             if (success) {
-                Log.d("[TAG]", "Regstration Success!")
+                Log.d("[TAG]", "Registration Success!")
+                callback(true, null)
             } else {
-                Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+                callback(false, errorMessage)
             }
         }
     }

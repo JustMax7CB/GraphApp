@@ -41,8 +41,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_register_user_name"
             android:layout_width="match_parent"
-            android:inputType="textEmailAddress"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             tools:text="Example" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,6 +66,7 @@
 
     <Button
         android:id="@+id/button_register_sign_up"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="220dp"
         android:layout_height="55dp"
         android:layout_below="@id/text_input_register_user_password"
@@ -73,7 +74,6 @@
         android:layout_marginTop="40dp"
         android:text="@string/sign_up_button"
         android:textSize="20sp" />
-
 
 
 </RelativeLayout>
